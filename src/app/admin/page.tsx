@@ -6,6 +6,11 @@ export default function AdminPage() {
   return (
     <div className="px-4 sm:px-12 py-8">
       <h1 className="text-ph-cream text-4xl tracking-tight mb-8">Admin Dashboard</h1>
+      <div className="mb-6">
+        <a href="/admin/printify" className="pixel-btn inline-block" style={{ background: "#ff59c7" }}>
+          → Printify integration
+        </a>
+      </div>
       <div className="grid sm:grid-cols-3 gap-4 mb-8">
         {[
           { label: "Stores", value: stores.length },
