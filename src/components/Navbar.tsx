@@ -2,14 +2,12 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "@/lib/cart";
-import { useCurrency } from "@/lib/currency";
 import { useAuth } from "@/lib/auth";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function Navbar() {
   const count = useCart((s) => s.count());
   const setOpen = useCart((s) => s.setOpen);
-  const { currency, setCurrency } = useCurrency();
   const user = useAuth((s) => s.user);
   const logout = useAuth((s) => s.logout);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,66 +22,73 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="w-full px-3 sm:px-8 py-3 sm:py-4 flex items-center justify-between gap-2 sm:gap-4 z-30 relative">
-      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-        <div className="relative shrink-0" ref={menuRef}>
-          <button
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label="Open menu"
-            className="pixel-btn flex flex-col gap-[3px] items-center justify-center w-10 h-10 sm:w-11 sm:h-11 p-0"
-          >
-            <span className="block w-5 h-[2px] bg-ph-cream"></span>
-            <span className="block w-5 h-[2px] bg-ph-cream"></span>
-            <span className="block w-5 h-[2px] bg-ph-cream"></span>
-          </button>
-          {menuOpen && (
-            <div className="menu-dropdown">
-              <Link href="/stores" className="menu-item" onClick={() => setMenuOpen(false)}>
-                Merch Marketplace
-                <span className="desc">All merchandise listed for sale</span>
-              </Link>
-              <Link href="/launch" className="menu-item" onClick={() => setMenuOpen(false)}>
-                Create Your Store
-                <span className="desc">Upload memes, add descriptions, pick merch styles</span>
-              </Link>
-              <span className="menu-item" data-disabled="true">
-                NFT Marketplace
-                <span className="desc">Coming soon</span>
-              </span>
-              <span className="menu-item" data-disabled="true">
-                Meme Generator
-                <span className="desc">Coming soon</span>
-              </span>
-            </div>
-          )}
-        </div>
-        <Link href="/" className="flex items-center gap-2 min-w-0">
-          <img src="/logo-wordmark.png" alt="printrhouse" className="h-12 sm:h-20 lg:h-[9rem] w-auto max-w-[55vw] object-contain" />
-        </Link>
+    <header className="w-full px-4 sm:px-8 py-3 sm:py-4 grid grid-cols-[auto_1fr_auto] items-center gap-3 z-30 relative">
+      {/* Hamburger */}
+      <div className="relative" ref={menuRef}>
+        <button
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Open menu"
+          className="w-10 h-10 flex flex-col gap-[5px] items-center justify-center rounded-md hover:bg-white/5"
+        >
+          <span className="block w-6 h-[2px] bg-white"></span>
+          <span className="block w-6 h-[2px] bg-white"></span>
+          <span className="block w-6 h-[2px] bg-white"></span>
+        </button>
+        {menuOpen && (
+          <div className="menu-dropdown">
+            <Link href="/stores" className="menu-item" onClick={() => setMenuOpen(false)}>
+              Merch Marketplace
+              <span className="desc">All merchandise listed for sale</span>
+            </Link>
+            <Link href="/launch" className="menu-item" onClick={() => setMenuOpen(false)}>
+              Create Your Store
+              <span className="desc">Upload memes, add descriptions, pick merch styles</span>
+            </Link>
+            <span className="menu-item" data-disabled="true">
+              NFT Marketplace
+              <span className="desc">Coming soon</span>
+            </span>
+            <span className="menu-item" data-disabled="true">
+              Meme Generator
+              <span className="desc">Coming soon</span>
+            </span>
+          </div>
+        )}
       </div>
 
-      <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-        <div className="toggle-pill hidden sm:inline-flex">
-          <button data-active={currency==="SOL"} onClick={()=>setCurrency("SOL")}>$Sol</button>
-          <button data-active={currency==="USD"} onClick={()=>setCurrency("USD")}>$Usd</button>
-        </div>
+      {/* Centered logo */}
+      <Link href="/" className="flex items-center gap-2 justify-self-center">
+        <img src="/logo-wordmark.png" alt="printrhouse" className="h-9 sm:h-12 w-auto object-contain" />
+      </Link>
+
+      {/* Right cluster: cart + bell */}
+      <div className="flex items-center gap-2 sm:gap-3 justify-self-end">
         <button
           onClick={() => setOpen(true)}
           aria-label="Open cart"
-          className="pixel-btn relative w-10 h-10 sm:w-11 sm:h-11 p-0 text-lg sm:text-xl flex items-center justify-center"
+          className="relative w-10 h-10 flex items-center justify-center rounded-md hover:bg-white/5"
         >
-          🛒
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="9" cy="20" r="1.4" /><circle cx="18" cy="20" r="1.4" />
+            <path d="M2.5 3h2.6l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5l1.6-6.5H6" />
+          </svg>
           {count > 0 && (
-            <span className="absolute -top-2 -right-2 bg-ph-pink text-[0.55rem] sm:text-[0.6rem] px-1.5 py-0.5 rounded-full">{count}</span>
+            <span className="absolute -top-1 -right-1 bg-ph-cyan text-[10px] text-ph-navy font-semibold px-1.5 py-0.5 rounded-full">{count}</span>
           )}
         </button>
+        <button aria-label="Notifications" className="w-10 h-10 flex items-center justify-center rounded-md hover:bg-white/5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 8a6 6 0 1 1 12 0c0 4 1.5 5.5 2 6.5H4c.5-1 2-2.5 2-6.5z" />
+            <path d="M10.5 19a1.7 1.7 0 0 0 3 0" />
+          </svg>
+        </button>
         {user ? (
-          <button onClick={logout} className="pixel-btn hidden sm:inline-block">{user.handle}</button>
+          <button onClick={logout} className="hidden sm:inline-block pixel-btn">{user.handle}</button>
         ) : (
-          <Link href="/login" className="pixel-btn hidden sm:inline-block">+ login</Link>
+          <Link href="/login" className="hidden sm:inline-block pixel-btn">Log in</Link>
         )}
         <div className="hidden lg:block">
-          <WalletMultiButton style={{ background:"#ab4cc7", color:"#fff", height:"36px", fontSize:"0.7rem", borderRadius:"4px" }} />
+          <WalletMultiButton style={{ background:"#2ec5ff", color:"#001a2c", height:"36px", fontSize:"0.75rem", borderRadius:"9999px", fontWeight:600 }} />
         </div>
       </div>
     </header>
