@@ -7,7 +7,10 @@ import { useMemo, ReactNode } from "react";
 import "@solana/wallet-adapter-react-ui/styles.css";
 
 export default function WalletContextProvider({ children }: { children: ReactNode }) {
-  const endpoint = useMemo(() => clusterApiUrl("mainnet-beta"), []);
+  const endpoint = useMemo(
+    () => process.env.NEXT_PUBLIC_SOLANA_RPC || clusterApiUrl("mainnet-beta"),
+    []
+  );
   const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter()], []);
   return (
     <ConnectionProvider endpoint={endpoint}>

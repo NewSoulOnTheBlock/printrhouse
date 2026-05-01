@@ -1,4 +1,4 @@
-export type Variant = { size: string; color: string; stock: number };
+export type Variant = { size: string; color: string; stock: number; printifyVariantId?: number };
 export type Product = {
   id: string;
   slug: string;
@@ -11,6 +11,7 @@ export type Product = {
   image: string;
   variants: Variant[];
   description: string;
+  printifyProductId?: string;
 };
 export type Store = {
   id: string;

@@ -13,6 +13,8 @@ export type CartItem = {
   priceSol: number;
   priceUsd: number;
   image: string;
+  printifyProductId?: string;
+  printifyVariantId?: number;
 };
 
 type CartState = {
