@@ -25,9 +25,10 @@ export type Store = {
 };
 
 export const stores: Store[] = [
-  { id: "s1", slug: "fatchoi", name: "FAT CHOI", owner: "Charlotte M.", ticker: "$FAT", banner: "/banners/b1.svg", avatar: "/avatars/a1.svg", bio: "Lucky merch for lucky degens." },
-  { id: "s2", slug: "believe", name: "BELIEVE", owner: "Kade R.", ticker: "$BLV", banner: "/banners/b2.svg", avatar: "/avatars/a2.svg", bio: "Faith-based fits for the on-chain faithful." },
-  { id: "s3", slug: "sprintr", name: "SPRINTR", owner: "Mika O.", ticker: "$PRINT", banner: "/banners/b3.svg", avatar: "/avatars/a3.svg", bio: "House brand. Pixel-perfect drops." },
+  { id: "s1", slug: "fatchoi", name: "FAT CHOI", owner: "Charlotte M.", ticker: "$FAT", banner: "/stores/cover-1.jpg", avatar: "/avatars/a1.svg", bio: "Lucky merch for lucky degens." },
+  { id: "s2", slug: "believe", name: "BELIEVE", owner: "Kade R.", ticker: "$BLV", banner: "/stores/cover-2.jpg", avatar: "/avatars/a2.svg", bio: "Faith-based fits for the on-chain faithful." },
+  { id: "s3", slug: "sprintr", name: "SPRINTR", owner: "Mika O.", ticker: "$PRINT", banner: "/stores/cover-3.jpg", avatar: "/avatars/a3.svg", bio: "House brand. Pixel-perfect drops." },
+  { id: "s4", slug: "printrhouse", name: "PRINTRHOUSE", owner: "House", ticker: "$PRTR", banner: "/stores/cover-4.jpg", avatar: "/mascot.png", bio: "Official house drops." },
 ];
 
 export const products: Product[] = [

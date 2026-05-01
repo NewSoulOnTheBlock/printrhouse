@@ -91,18 +91,24 @@ export default function HomePage() {
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stores.map((s) => (
-            <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors">
-              <div className="aspect-[3/1] bg-white/5 rounded-lg mb-3 flex items-center justify-center text-white/30 text-sm">{s.name}</div>
-              <div className="flex justify-between items-center">
-                <div>
-                  <div className="text-white text-sm font-semibold">{s.name}</div>
-                  <div className="text-white/50 text-xs">by {s.owner}</div>
+          {stores.map((s, i) => {
+            const covers = ["/stores/cover-1.jpg", "/stores/cover-2.jpg", "/stores/cover-3.jpg", "/stores/cover-4.jpg"];
+            const cover = covers[i % covers.length];
+            return (
+              <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
+                <div className="aspect-[3/1] rounded-lg mb-3 overflow-hidden bg-white/5">
+                  <img src={cover} alt={s.name} className="w-full h-full object-cover" />
                 </div>
-                <div className="text-ph-cyan text-xs">{s.ticker}</div>
-              </div>
-            </Link>
-          ))}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="text-white text-sm font-semibold">{s.name}</div>
+                    <div className="text-white/50 text-xs">by {s.owner}</div>
+                  </div>
+                  <div className="text-ph-cyan text-xs">{s.ticker}</div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
