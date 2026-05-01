@@ -1,44 +1,69 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import { products, stores } from "@/lib/data";
 
+const SLIDES = [
+  { kind: "mascot",  src: "/mascot.png",                label: "Mascot" },
+  { kind: "tee",     src: "/products/tee-cloud.svg",    label: "Drop" },
+  { kind: "hoodie",  src: "/products/hoodie-cloud.svg", label: "Hoodie" },
+  { kind: "cap",     src: "/products/cap.svg",          label: "Cap" },
+];
+
 export default function HomePage() {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % SLIDES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <div>
-      {/* HERO */}
-      <section className="px-4 sm:px-12 pt-6 pb-20 grid lg:grid-cols-2 gap-8 items-center relative overflow-hidden">
-        <div className="relative z-10">
-          <h1 className="text-ph-cream leading-[0.9] text-[14vw] lg:text-[7rem] tracking-tighter">
-            <span className="block">LAUNCH</span>
-            <span className="block">YOUR</span>
-            <span className="block">STORE</span>
-          </h1>
-          <p className="mt-6 text-[0.7rem] uppercase tracking-widest text-ph-cream/80">
-            launch a store, zero upfront cost
-          </p>
-          <div className="mt-8 flex gap-3">
-            <Link href="/launch" className="pixel-btn">Start a Store</Link>
-            <Link href="/stores" className="pixel-btn" style={{ background: "#ff59c7" }}>Shop drops</Link>
-          </div>
-        </div>
-        <div className="relative h-[420px] lg:h-[520px]">
-          <img src="/mascot.png" alt="Printrhouse mascot"
-               className="absolute right-0 bottom-0 h-[110%] w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] z-20" />
-          <div className="absolute right-[55%] top-4 w-[42%] aspect-[3/4] pixel-card p-4 rotate-3">
-            <img src="/products/tee-cloud.svg" className="w-full h-full object-contain bg-white/95 rounded" />
-            <div className="absolute -top-3 left-4 bg-ph-mint text-ph-purple-dark text-[0.55rem] px-2 py-1 rounded">Drop</div>
-          </div>
-          <div className="absolute left-2 bottom-6 w-[34%] aspect-square pixel-card p-3 -rotate-6">
-            <img src="/products/cap.svg" className="w-full h-full object-contain bg-white/95 rounded" />
-            <div className="absolute -top-3 right-3 bg-ph-pink text-white text-[0.55rem] px-2 py-1 rounded">Steph</div>
+      {/* HERO carousel */}
+      <section className="px-4 sm:px-12 pt-6 pb-20">
+        <div className="hero-carousel relative">
+          <div className="grid lg:grid-cols-2 gap-6 items-center p-6 sm:p-10 min-h-[520px]">
+            <div className="relative z-10">
+              <h1 className="font-pixel-hero text-ph-cream text-[7vw] lg:text-[3.4rem]">
+                <span className="block">LAUNCH</span>
+                <span className="block">YOUR</span>
+                <span className="block">STORE</span>
+              </h1>
+              <p className="mt-6 text-[0.7rem] uppercase tracking-widest text-ph-cream/80">
+                launch a store, zero upfront cost
+              </p>
+              <div className="mt-8 flex gap-3 flex-wrap">
+                <Link href="/launch" className="pixel-btn">Launch Store</Link>
+                <Link href="/stores" className="pixel-btn" style={{ background: "#ff59c7" }}>Shop drops</Link>
+              </div>
+            </div>
+
+            <div className="relative h-[360px] lg:h-[460px] flex items-center justify-center">
+              {SLIDES.map((s, i) => (
+                <img
+                  key={s.kind}
+                  src={s.src}
+                  alt={s.label}
+                  className="hero-slide absolute max-h-[100%] max-w-[80%] w-auto h-auto object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+                  style={{ opacity: i === idx ? 1 : 0 }}
+                />
+              ))}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 hero-dots">
+                {SLIDES.map((_, i) => (
+                  <button key={i} data-active={i === idx} onClick={() => setIdx(i)} aria-label={`slide ${i+1}`} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* NEW ARRIVALS */}
+      {/* NEW COLLECTIONS */}
       <section className="px-4 sm:px-12 py-10">
         <div className="flex justify-between items-end mb-6">
-          <h2 className="text-ph-cream text-3xl sm:text-5xl tracking-tight">New Arrivals</h2>
+          <h2 className="text-ph-cream text-3xl sm:text-5xl tracking-tight">New Collections</h2>
           <Link href="/stores" className="text-[0.65rem] uppercase tracking-widest text-ph-cream/70 hover:text-ph-pink">view all →</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

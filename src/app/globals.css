@@ -17,7 +17,7 @@
 }
 
 html, body {
-  background: #4a14b8;
+  background: #582294;
   color: #f6efe1;
   font-family: var(--font-pixel);
   letter-spacing: 0.02em;
@@ -25,10 +25,7 @@ html, body {
 }
 
 body {
-  background:
-    radial-gradient(circle at 20% 10%, #6a23e6 0%, transparent 45%),
-    radial-gradient(circle at 80% 90%, #3d0fa8 0%, transparent 50%),
-    #4a14b8;
+  background: #582294;
   min-height: 100vh;
 }
 
@@ -40,7 +37,7 @@ body {
 }
 
 .pixel-btn {
-  background: #6a23e6;
+  background: #ab4cc7;
   color: #f6efe1;
   padding: 0.6rem 1rem;
   border: 0;
@@ -97,7 +94,50 @@ body {
 }
 
 body {
-  background: var(--background);
+  background: #582294;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* === Hero pixel font + carousel === */
+.font-pixel-hero {
+  font-family: "Press Start 2P", "PixelFont", ui-monospace, monospace;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-shadow: 4px 4px 0 #2a0980, 0 0 12px rgba(0,0,0,0.4);
+}
+
+.hero-carousel {
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #6a23e6 0%, #3d0fa8 100%);
+  box-shadow: 0 0 0 3px #2a0980, inset 0 0 0 2px rgba(255,255,255,0.08);
+  position: relative;
+}
+.hero-slide { transition: opacity 400ms ease; }
+.hero-dots { display: flex; gap: 8px; justify-content: center; }
+.hero-dots button {
+  width: 10px; height: 10px; border-radius: 9999px;
+  background: rgba(255,255,255,0.3);
+}
+.hero-dots button[data-active="true"] { background: #ff59c7; width: 28px; }
+
+/* === Hamburger dropdown === */
+.menu-dropdown {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  min-width: 280px;
+  background: linear-gradient(180deg, #5b1bd1 0%, #3d0fa8 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 0 3px #2a0980, 0 12px 30px rgba(0,0,0,0.4);
+  padding: 8px;
+  z-index: 50;
+}
+.menu-item {
+  display: block; padding: 12px 14px; border-radius: 6px;
+  text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em;
+  color: #f6efe1;
+}
+.menu-item:hover { background: rgba(255,255,255,0.08); color: #ff59c7; }
+.menu-item .desc { display: block; font-size: 0.55rem; color: rgba(246,239,225,0.55); margin-top: 4px; text-transform: none; letter-spacing: 0.04em; }
+.menu-item[data-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+.menu-item[data-disabled="true"]:hover { background: transparent; color: #f6efe1; }
