@@ -73,6 +73,18 @@ body { min-height: 100vh; overflow-x: hidden; }
 }
 .feature-cta:hover { background: #f0f0f0; }
 
+.input {
+  width: 100%;
+  background: #14062a;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  outline: none;
+}
+.input:focus { border-color: #8a3ab8; }
+
 .dot-row { display: flex; gap: 6px; justify-content: center; padding: 12px 0; }
 .dot-row button {
   width: 8px; height: 8px; border-radius: 9999px;

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import WalletContextProvider from "@/components/WalletProvider";
 import Navbar from "@/components/Navbar";
 import CartDrawer from "@/components/CartDrawer";
+import Toaster from "@/components/Toaster";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +23,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Navbar />
           <main className="flex-1">{children}</main>
           <CartDrawer />
+          <Toaster />
+          <Analytics />
           <footer className="px-6 py-10 mt-16 text-center text-xs text-white/40">
             © printrhouse · launch a store, zero upfront cost · fulfilled by printify
           </footer>
