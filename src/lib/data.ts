@@ -58,13 +58,13 @@ export const products: Product[] = [
   { id: "p9", slug: "fatchoi-meerkat-car-tee", storeId: "s1", name: "Meerkat Cruise Tee", ticker: "$FAT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/fatchoi/meerkat-car-tee.jpg",
     variants: [{size:"S",color:"yellow",stock:11},{size:"M",color:"yellow",stock:15},{size:"L",color:"yellow",stock:9}],
     description: "Oversized boxy fit. The cruise continues." },
-  { id: "p10", slug: "fatchoi-tiger-plush-black", storeId: "s1", name: "Tiger Plush Tee · Black", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-black-tee.jpg",
+  { id: "p10", slug: "fatchoi-tiger-plush-black", storeId: "s1", name: "Cheeto Tiger Tee 1", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-black-tee.jpg",
     variants: [{size:"S",color:"black",stock:12},{size:"M",color:"black",stock:18},{size:"L",color:"black",stock:9}],
     description: "Tiny tiger plush, big tee. Midweight 220gsm cotton." },
-  { id: "p11", slug: "fatchoi-tiger-plush-white", storeId: "s1", name: "Tiger Plush Tee · White", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-white-tee.jpg",
+  { id: "p11", slug: "fatchoi-tiger-plush-white", storeId: "s1", name: "Cheeto Tiger Tee 2", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-white-tee.jpg",
     variants: [{size:"S",color:"white",stock:12},{size:"M",color:"white",stock:18},{size:"L",color:"white",stock:9}],
     description: "Same plush, lighter cotton. Summer weight." },
-  { id: "p12", slug: "fatchoi-tiger-doodle", storeId: "s1", name: "Tiger Doodle Tee", ticker: "$FAT", priceSol: 0.25, priceUsd: 30, type: "tshirt", image: "/products/fatchoi/tiger-doodle-tee.jpg",
+  { id: "p12", slug: "fatchoi-tiger-doodle", storeId: "s1", name: "Cheeto Tiger Tee 3", ticker: "$FAT", priceSol: 0.25, priceUsd: 30, type: "tshirt", image: "/products/fatchoi/tiger-doodle-tee.jpg",
     variants: [{size:"S",color:"white",stock:10},{size:"M",color:"white",stock:14},{size:"L",color:"white",stock:7}],
     description: "Childlike tiger sketch. Lucky energy, hand-drawn." },
 
@@ -80,7 +80,7 @@ export const products: Product[] = [
     description: "Gradient praying-hands square print. Faith on the chest." },
 
   // SPRINTR drops
-  { id: "p16", slug: "sprintr-panda-sol", storeId: "s3", name: "Solana Panda Tee", ticker: "$PRINT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/sprintr/panda-sol-tee.jpg",
+  { id: "p16", slug: "sprintr-panda-sol", storeId: "s3", name: "FatChoi Tee 1", ticker: "$PRINT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/sprintr/panda-sol-tee.jpg",
     variants: [{size:"S",color:"black",stock:10},{size:"M",color:"black",stock:15},{size:"L",color:"black",stock:8}],
     description: "Panda in a purple hoodie holding the Solana coin stack." },
   { id: "p17", slug: "sprintr-panda-allover", storeId: "s3", name: "Panda Allover Tee", ticker: "$PRINT", priceSol: 0.42, priceUsd: 52, type: "tshirt", image: "/products/sprintr/panda-allover-tee.jpg",
