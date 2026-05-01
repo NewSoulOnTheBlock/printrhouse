@@ -115,12 +115,12 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="px-4 sm:px-12 py-8 grid lg:grid-cols-2 gap-8">
+    <div className="px-3 sm:px-12 py-6 sm:py-8 grid lg:grid-cols-2 gap-6 lg:gap-8">
       <div>
-        <h1 className="text-ph-cream text-4xl tracking-tight mb-2">Checkout</h1>
-        <p className="text-ph-cream/60 text-[0.6rem] uppercase tracking-widest mb-6">order id: {orderId}</p>
+        <h1 className="text-ph-cream text-3xl sm:text-4xl tracking-tight mb-2">Checkout</h1>
+        <p className="text-ph-cream/60 text-[0.55rem] sm:text-[0.6rem] uppercase tracking-widest mb-5 sm:mb-6 break-all">order id: {orderId}</p>
 
-        <div className="pixel-card p-5 grid grid-cols-2 gap-3">
+        <div className="pixel-card p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
           {([
             ["first_name","First name"],["last_name","Last name"],
             ["email","Email"],["phone","Phone"],

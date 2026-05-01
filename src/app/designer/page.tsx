@@ -174,12 +174,12 @@ export default function DesignerPage() {
   }
 
   return (
-    <div className="px-4 sm:px-12 py-6 grid lg:grid-cols-[1fr_360px] gap-6">
-      <div className="pixel-card p-4">
-        <div ref={wrapRef} className="bg-white/95 rounded overflow-hidden flex items-center justify-center">
-          <canvas ref={canvasElRef} />
+    <div className="px-3 sm:px-12 py-6 grid lg:grid-cols-[1fr_360px] gap-4 lg:gap-6">
+      <div className="pixel-card p-3 sm:p-4">
+        <div ref={wrapRef} className="bg-white/95 rounded overflow-hidden flex items-center justify-center w-full">
+          <canvas ref={canvasElRef} className="max-w-full h-auto" style={{ touchAction: "none" }} />
         </div>
-        <p className="text-[0.55rem] uppercase tracking-widest text-ph-cream/60 mt-3">
+        <p className="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-widest text-ph-cream/60 mt-3">
           dashed pink box = printify print area · drag/resize/rotate any layer
         </p>
       </div>
