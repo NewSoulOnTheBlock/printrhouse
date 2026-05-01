@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ph-navy:       #582294;
-  --color-ph-navy-2:     #6b2eaf;
-  --color-ph-navy-3:     #7e3dc4;
-  --color-ph-cyan:       #ab4cc7;
+  --color-ph-navy:       #3d1469;
+  --color-ph-navy-2:     #4a1a7d;
+  --color-ph-navy-3:     #5a2399;
+  --color-ph-cyan:       #8a3ab8;
   --color-ph-yellow:     #ffd24a;
   --color-ph-cream:      #f6efe1;
   --color-ph-pink:       #ff59c7;
   --color-ph-mint:       #6bf2c2;
-  --color-ph-purple:     #ab4cc7;
-  --color-ph-purple-deep:#582294;
-  --color-ph-purple-dark:#3d1469;
+  --color-ph-purple:     #8a3ab8;
+  --color-ph-purple-deep:#3d1469;
+  --color-ph-purple-dark:#260b42;
   --font-sans:  var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-pixel: var(--font-pixel), "Press Start 2P", ui-monospace, monospace;
 }
 
 html, body {
-  background: #582294;
+  background: #3d1469;
   color: #f6efe1;
   font-family: var(--font-sans);
   letter-spacing: 0;
@@ -27,7 +27,7 @@ body { min-height: 100vh; overflow-x: hidden; }
 
 /* Modern button (replaces purple pixel-btn for default UI) */
 .pixel-btn {
-  background: #ab4cc7;
+  background: #8a3ab8;
   color: #f6efe1;
   padding: 0.55rem 0.95rem;
   border: 0;
@@ -38,11 +38,11 @@ body { min-height: 100vh; overflow-x: hidden; }
   font-weight: 500;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
-.pixel-btn:hover { background: #bd66d4; }
+.pixel-btn:hover { background: #9d49cc; }
 
 /* Card surface for sections / product cells */
 .pixel-card {
-  background: #6b2eaf;
+  background: #4a1a7d;
   border-radius: 14px;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
 }
@@ -50,23 +50,23 @@ body { min-height: 100vh; overflow-x: hidden; }
 /* Pixel font available via class when desired */
 .font-pixel-hero { font-family: var(--font-pixel); letter-spacing: 0.02em; line-height: 1.05; }
 
-/* Featured-drop hero card (light gradient on purple) */
+/* Featured-drop hero card (light gradient on deep purple) */
 .feature-card {
   position: relative;
   border-radius: 22px;
   overflow: hidden;
-  background: linear-gradient(180deg, #f6f6f6 0%, #d8c8e8 55%, #582294 100%);
-  box-shadow: 0 6px 30px rgba(0,0,0,0.35);
+  background: linear-gradient(180deg, #f6f6f6 0%, #c4b0d8 55%, #3d1469 100%);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.4);
 }
 .feature-pill {
   display: inline-flex; align-items: center;
-  background: #ab4cc7; color: #fff;
+  background: #8a3ab8; color: #fff;
   font-weight: 600; font-size: 0.75rem;
   padding: 6px 14px; border-radius: 9999px;
 }
 .feature-cta {
   display: inline-flex; align-items: center; gap: 8px;
-  background: #ffffff; color: #582294;
+  background: #ffffff; color: #3d1469;
   padding: 10px 18px; border-radius: 9999px;
   font-weight: 600; font-size: 0.85rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
@@ -76,26 +76,26 @@ body { min-height: 100vh; overflow-x: hidden; }
 .dot-row { display: flex; gap: 6px; justify-content: center; padding: 12px 0; }
 .dot-row button {
   width: 8px; height: 8px; border-radius: 9999px;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.22);
   transition: background 120ms ease, width 120ms ease;
 }
-.dot-row button[data-active="true"] { background: #ab4cc7; width: 22px; }
+.dot-row button[data-active="true"] { background: #8a3ab8; width: 22px; }
 
 .toggle-pill {
-  background: #3d1469;
+  background: #260b42;
   border-radius: 9999px;
   padding: 4px;
   display: inline-flex;
   gap: 4px;
 }
 .toggle-pill button { padding: 6px 14px; border-radius: 9999px; font-size: 0.7rem; }
-.toggle-pill button[data-active="true"] { background: #ab4cc7; color: #fff; font-weight: 600; }
+.toggle-pill button[data-active="true"] { background: #8a3ab8; color: #fff; font-weight: 600; }
 
 /* Dropdown menu */
 .menu-dropdown {
   position: absolute; top: calc(100% + 8px); left: 0;
   min-width: 280px;
-  background: #6b2eaf;
+  background: #4a1a7d;
   border-radius: 12px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 30px rgba(0,0,0,0.5);
   padding: 8px;
@@ -113,7 +113,7 @@ body { min-height: 100vh; overflow-x: hidden; }
 /* Discount pill on product cards */
 .discount-pill {
   position: absolute; top: 10px; right: 10px;
-  background: #582294; color: #fff;
+  background: #260b42; color: #fff;
   font-size: 0.7rem; font-weight: 600;
   padding: 4px 10px; border-radius: 9999px;
 }
