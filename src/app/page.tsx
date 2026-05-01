@@ -24,26 +24,26 @@ export default function HomePage() {
     <div className="px-4 sm:px-8 lg:px-12">
       {/* Featured Drop hero */}
       <section className="pt-1 pb-3 sm:pt-2 sm:pb-4">
-        <div className="feature-card aspect-[16/11] sm:aspect-[16/8] lg:aspect-[16/6]">
+        <div className="feature-card aspect-[4/3] sm:aspect-[16/8] lg:aspect-[16/6]">
           <div className="absolute top-4 left-4 sm:top-5 sm:left-5">
             <span className="feature-pill">Featured Drop</span>
           </div>
 
-          <div className="absolute inset-0 flex items-end sm:items-center justify-end">
+          <div className="absolute inset-0">
             {SLIDES.map((s, i) => (
               <img
                 key={s.id}
                 src={s.img}
                 alt={s.label}
-                className="absolute right-4 sm:right-10 lg:right-16 max-h-[85%] w-auto object-contain transition-opacity duration-500"
+                className="absolute inset-0 w-full h-full object-contain transition-opacity duration-500"
                 style={{ opacity: i === idx ? 1 : 0 }}
               />
             ))}
           </div>
 
-          <div className="absolute left-4 sm:left-6 bottom-16 sm:bottom-20 max-w-[60%]">
+          <div className="absolute left-4 sm:left-6 bottom-4 sm:bottom-6 max-w-[60%] z-10">
             <div className="flex items-center gap-2 mb-3">
-              <h2 className="text-ph-navy text-xl sm:text-3xl lg:text-4xl font-bold">{slide.label}</h2>
+              <h2 className="text-white text-xl sm:text-3xl lg:text-4xl font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">{slide.label}</h2>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffd24a">
                 <path d="M12 2l2.39 4.84L20 8l-4 3.91.94 5.5L12 14.77 7.06 17.4 8 11.91 4 8l5.61-1.16z" />
               </svg>
