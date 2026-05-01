@@ -92,7 +92,7 @@ export default function MarketplacePage() {
       )}
 
       {loading && (
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {[0,1,2,3,4,5,6,7].map((i) => (
             <div key={i} className="pixel-card p-3 animate-pulse">
               <div className="bg-white/10 rounded-md aspect-square mb-3"></div>
@@ -118,7 +118,7 @@ export default function MarketplacePage() {
       )}
 
       {!loading && merged.length > 0 && (
-        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {merged.map((p) => (
             <Link key={p.id} href={p.href} className="pixel-card p-3 block hover:-translate-y-1 transition-transform">
               <div className="bg-white/95 rounded-md aspect-square overflow-hidden mb-3 flex items-center justify-center relative">

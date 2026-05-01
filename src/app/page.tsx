@@ -73,13 +73,13 @@ export default function HomePage() {
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
         </div>
 
-        {/* Mobile: 3-up snap-scroll slider */}
+        {/* Mobile: ~2-up snap-scroll slider (larger tiles) */}
         <div className="sm:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory flex gap-3 pb-3 scrollbar-thin">
           {products.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
         </div>
 
         {/* Tablet/Desktop grid */}
-        <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {products.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
         </div>
       </section>
@@ -129,7 +129,7 @@ function ProductTile({ p, discount }: { p: any; discount?: boolean }) {
   return (
     <Link
       href={`/product/${p.slug}`}
-      className="snap-start shrink-0 basis-[31%] sm:basis-auto min-w-[31%] sm:min-w-0 block group"
+      className="snap-start shrink-0 basis-[46%] sm:basis-auto min-w-[46%] sm:min-w-0 block group"
     >
       <div className="relative bg-white rounded-2xl aspect-square overflow-hidden flex items-center justify-center">
         <img src={p.image} alt={p.name} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform" />
