@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="w-full px-4 sm:px-8 py-3 sm:py-4 grid grid-cols-[auto_1fr_auto] items-center gap-3 z-30 relative">
+    <header className="w-full px-4 sm:px-8 pt-2 pb-1 sm:py-3 grid grid-cols-[auto_1fr_auto] items-center gap-3 z-30 relative">
       {/* Hamburger */}
       <div className="relative" ref={menuRef}>
         <button
@@ -60,7 +60,7 @@ export default function Navbar() {
 
       {/* Centered logo */}
       <Link href="/" className="flex items-center gap-2 justify-self-center">
-        <img src="/logo-wordmark.png" alt="printrhouse" className="h-36 sm:h-48 w-auto max-w-[55vw] object-contain" />
+        <img src="/logo-wordmark.png" alt="printrhouse" className="h-16 sm:h-28 lg:h-40 w-auto max-w-[60vw] object-contain" />
       </Link>
 
       {/* Right cluster: currency toggle + cart + bell */}

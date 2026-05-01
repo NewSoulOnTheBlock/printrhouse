@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <div className="px-4 sm:px-8 lg:px-12">
       {/* Featured Drop hero */}
-      <section className="pt-2 pb-2">
+      <section className="pt-1 pb-3 sm:pt-2 sm:pb-4">
         <div className="feature-card aspect-[16/11] sm:aspect-[16/8] lg:aspect-[16/6]">
           <div className="absolute top-4 left-4 sm:top-5 sm:left-5">
             <span className="feature-pill">Featured Drop</span>
@@ -67,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Best Sellers */}
-      <section className="pt-4 pb-8">
+      <section className="pt-2 pb-4 sm:pt-4 sm:pb-8">
         <div className="flex items-end justify-between mb-4 sm:mb-6">
           <h2 className="text-white text-2xl sm:text-3xl font-bold">Best Sellers</h2>
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
@@ -85,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Stores */}
-      <section className="py-8">
+      <section className="py-4 sm:py-8">
         <div className="flex items-end justify-between mb-4 sm:mb-6">
           <h2 className="text-white text-2xl sm:text-3xl font-bold">Featured Stores</h2>
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
