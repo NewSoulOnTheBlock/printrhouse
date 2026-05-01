@@ -9,12 +9,6 @@ const SLIDES = [
   { id: "cover2",  label: "BELIEVE",      img: "/stores/cover-2.jpg",         href: "/store/believe" },
   { id: "cover3",  label: "SPRINTR",      img: "/stores/cover-3.jpg",         href: "/store/sprintr" },
   { id: "cover4",  label: "House Drop",   img: "/stores/cover-4.jpg",         href: "/stores" },
-  { id: "tee",     label: "Cloud Tee",    img: "/products/tee-cloud.svg",     href: "/product/fat-choi-tshirt" },
-  { id: "hoodie",  label: "Cloud Hoodie", img: "/products/hoodie-cloud.svg",  href: "/product/believe-hoodie" },
-  { id: "sweat",   label: "House Sweat",  img: "/products/sweat-cloud.svg",   href: "/product/sprintr-sweatshirt" },
-  { id: "long",    label: "Longsleeve",   img: "/products/long-cloud.svg",    href: "/product/fat-choi-longsleeve" },
-  { id: "cap",     label: "Pixel Cap",    img: "/products/cap.svg",           href: "/product/sprintr-cap" },
-  { id: "tee2",    label: "Believe Tee",  img: "/products/tee-cloud.svg",     href: "/product/believe-tee" },
 ];
 
 export default function HomePage() {
@@ -77,15 +71,22 @@ export default function HomePage() {
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
         </div>
 
-        {/* Mobile: ~2-up snap-scroll slider (larger tiles) */}
-        <div className="sm:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory flex gap-3 pb-3 scrollbar-thin">
-          {products.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
-        </div>
+        {(() => {
+          const realProducts = products.filter((p) => p.image && !p.image.endsWith(".svg"));
+          return (
+            <>
+              {/* Mobile: ~2-up snap-scroll slider (larger tiles) */}
+              <div className="sm:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory flex gap-3 pb-3 scrollbar-thin">
+                {realProducts.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
+              </div>
 
-        {/* Tablet/Desktop grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {products.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
-        </div>
+              {/* Tablet/Desktop grid */}
+              <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                {realProducts.map((p, i) => <ProductTile key={p.id} p={p} discount={i === 1} />)}
+              </div>
+            </>
+          );
+        })()}
       </section>
 
       {/* Featured Stores */}
