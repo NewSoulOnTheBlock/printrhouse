@@ -88,7 +88,7 @@ export default function Navbar() {
           <Link href="/login" className="hidden sm:inline-block pixel-btn">Log in</Link>
         )}
         <div className="hidden lg:block">
-          <WalletMultiButton style={{ background:"#8a3ab8", color:"#fff", height:"36px", fontSize:"0.75rem", borderRadius:"9999px", fontWeight:600 }} />
+          <WalletMultiButton style={{ background:"#6b2a96", color:"#fff", height:"36px", fontSize:"0.75rem", borderRadius:"9999px", fontWeight:600 }} />
         </div>
       </div>
     </header>

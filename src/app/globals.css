@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ph-navy:       #3d1469;
-  --color-ph-navy-2:     #4a1a7d;
-  --color-ph-navy-3:     #5a2399;
-  --color-ph-cyan:       #8a3ab8;
+  --color-ph-navy:       #1f0a3a;
+  --color-ph-navy-2:     #2d1054;
+  --color-ph-navy-3:     #3a1670;
+  --color-ph-cyan:       #6b2a96;
   --color-ph-yellow:     #ffd24a;
   --color-ph-cream:      #f6efe1;
   --color-ph-pink:       #ff59c7;
   --color-ph-mint:       #6bf2c2;
-  --color-ph-purple:     #8a3ab8;
-  --color-ph-purple-deep:#3d1469;
-  --color-ph-purple-dark:#260b42;
+  --color-ph-purple:     #6b2a96;
+  --color-ph-purple-deep:#1f0a3a;
+  --color-ph-purple-dark:#14062a;
   --font-sans:  var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-pixel: var(--font-pixel), "Press Start 2P", ui-monospace, monospace;
 }
 
 html, body {
-  background: #3d1469;
+  background: #1f0a3a;
   color: #f6efe1;
   font-family: var(--font-sans);
   letter-spacing: 0;
@@ -27,7 +27,7 @@ body { min-height: 100vh; overflow-x: hidden; }
 
 /* Modern button (replaces purple pixel-btn for default UI) */
 .pixel-btn {
-  background: #8a3ab8;
+  background: #6b2a96;
   color: #f6efe1;
   padding: 0.55rem 0.95rem;
   border: 0;
@@ -38,66 +38,66 @@ body { min-height: 100vh; overflow-x: hidden; }
   font-weight: 500;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
-.pixel-btn:hover { background: #9d49cc; }
+.pixel-btn:hover { background: #7d35ad; }
 
 /* Card surface for sections / product cells */
 .pixel-card {
-  background: #4a1a7d;
+  background: #2d1054;
   border-radius: 14px;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 
 /* Pixel font available via class when desired */
 .font-pixel-hero { font-family: var(--font-pixel); letter-spacing: 0.02em; line-height: 1.05; }
 
-/* Featured-drop hero card (light gradient on deep purple) */
+/* Featured-drop hero card (light gradient on deepest purple) */
 .feature-card {
   position: relative;
   border-radius: 22px;
   overflow: hidden;
-  background: linear-gradient(180deg, #f6f6f6 0%, #c4b0d8 55%, #3d1469 100%);
-  box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+  background: linear-gradient(180deg, #f6f6f6 0%, #a896c4 55%, #1f0a3a 100%);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.5);
 }
 .feature-pill {
   display: inline-flex; align-items: center;
-  background: #8a3ab8; color: #fff;
+  background: #6b2a96; color: #fff;
   font-weight: 600; font-size: 0.75rem;
   padding: 6px 14px; border-radius: 9999px;
 }
 .feature-cta {
   display: inline-flex; align-items: center; gap: 8px;
-  background: #ffffff; color: #3d1469;
+  background: #ffffff; color: #1f0a3a;
   padding: 10px 18px; border-radius: 9999px;
   font-weight: 600; font-size: 0.85rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 .feature-cta:hover { background: #f0f0f0; }
 
 .dot-row { display: flex; gap: 6px; justify-content: center; padding: 12px 0; }
 .dot-row button {
   width: 8px; height: 8px; border-radius: 9999px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.2);
   transition: background 120ms ease, width 120ms ease;
 }
-.dot-row button[data-active="true"] { background: #8a3ab8; width: 22px; }
+.dot-row button[data-active="true"] { background: #6b2a96; width: 22px; }
 
 .toggle-pill {
-  background: #260b42;
+  background: #14062a;
   border-radius: 9999px;
   padding: 4px;
   display: inline-flex;
   gap: 4px;
 }
 .toggle-pill button { padding: 6px 14px; border-radius: 9999px; font-size: 0.7rem; }
-.toggle-pill button[data-active="true"] { background: #8a3ab8; color: #fff; font-weight: 600; }
+.toggle-pill button[data-active="true"] { background: #6b2a96; color: #fff; font-weight: 600; }
 
 /* Dropdown menu */
 .menu-dropdown {
   position: absolute; top: calc(100% + 8px); left: 0;
   min-width: 280px;
-  background: #4a1a7d;
+  background: #2d1054;
   border-radius: 12px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 12px 30px rgba(0,0,0,0.6);
   padding: 8px;
   z-index: 50;
 }
@@ -105,15 +105,15 @@ body { min-height: 100vh; overflow-x: hidden; }
   display: block; padding: 12px 14px; border-radius: 8px;
   font-size: 0.85rem; color: #f6efe1;
 }
-.menu-item:hover { background: rgba(255,255,255,0.08); color: #ffd24a; }
-.menu-item .desc { display: block; font-size: 0.7rem; color: rgba(246,239,225,0.6); margin-top: 4px; }
+.menu-item:hover { background: rgba(255,255,255,0.06); color: #ffd24a; }
+.menu-item .desc { display: block; font-size: 0.7rem; color: rgba(246,239,225,0.55); margin-top: 4px; }
 .menu-item[data-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
 .menu-item[data-disabled="true"]:hover { background: transparent; color: #f6efe1; }
 
 /* Discount pill on product cards */
 .discount-pill {
   position: absolute; top: 10px; right: 10px;
-  background: #260b42; color: #fff;
+  background: #14062a; color: #fff;
   font-size: 0.7rem; font-weight: 600;
   padding: 4px 10px; border-radius: 9999px;
 }
