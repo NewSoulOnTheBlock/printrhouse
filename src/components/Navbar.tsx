@@ -58,7 +58,7 @@ export default function Navbar() {
 
       {/* Centered logo */}
       <Link href="/" className="flex items-center gap-2 justify-self-center">
-        <img src="/logo-wordmark.png" alt="printrhouse" className="h-9 sm:h-12 w-auto object-contain" />
+        <img src="/logo-wordmark.png" alt="printrhouse" className="h-36 sm:h-48 w-auto max-w-[55vw] object-contain" />
       </Link>
 
       {/* Right cluster: cart + bell */}
