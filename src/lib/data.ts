@@ -49,10 +49,10 @@ export const products: Product[] = [
     variants: [{size:"S",color:"white",stock:9},{size:"M",color:"white",stock:16}], description: "Lightweight cotton tee with chest emblem." },
 
   // FAT CHOI drops
-  { id: "p7", slug: "fatchoi-lion-plush-tee", storeId: "s1", name: "Lion Plush Tee", ticker: "$FAT", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/fatchoi/lion-plush-tee.jpg",
+  { id: "p7", slug: "fatchoi-lion-plush-tee", storeId: "s1", name: "Flat Eric Tee", ticker: "$FAT", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/fatchoi/lion-plush-tee.jpg",
     variants: [{size:"S",color:"yellow",stock:10},{size:"M",color:"yellow",stock:14},{size:"L",color:"yellow",stock:8},{size:"XL",color:"yellow",stock:5}],
     description: "Mustard-yellow tee with the iconic thinking lion plush portrait." },
-  { id: "p8", slug: "fatchoi-meerkat-car-hoodie", storeId: "s1", name: "Meerkat Cruise Hoodie", ticker: "$FAT", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/fatchoi/meerkat-car-hoodie.jpg",
+  { id: "p8", slug: "fatchoi-meerkat-car-hoodie", storeId: "s1", name: "Flat Eric Hoodie", ticker: "$FAT", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/fatchoi/meerkat-car-hoodie.jpg",
     variants: [{size:"M",color:"yellow",stock:7},{size:"L",color:"yellow",stock:9},{size:"XL",color:"yellow",stock:4}],
     description: "Heavyweight pullover hoodie. Meerkat at the wheel of a vintage cruiser." },
   { id: "p9", slug: "fatchoi-meerkat-car-tee", storeId: "s1", name: "Meerkat Cruise Tee", ticker: "$FAT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/fatchoi/meerkat-car-tee.jpg",
@@ -83,7 +83,7 @@ export const products: Product[] = [
   { id: "p16", slug: "sprintr-panda-sol", storeId: "s3", name: "FatChoi Tee 1", ticker: "$PRINT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/sprintr/panda-sol-tee.jpg",
     variants: [{size:"S",color:"black",stock:10},{size:"M",color:"black",stock:15},{size:"L",color:"black",stock:8}],
     description: "Panda in a purple hoodie holding the Solana coin stack." },
-  { id: "p17", slug: "sprintr-panda-allover", storeId: "s3", name: "Panda Allover Tee", ticker: "$PRINT", priceSol: 0.42, priceUsd: 52, type: "tshirt", image: "/products/sprintr/panda-allover-tee.jpg",
+  { id: "p17", slug: "sprintr-panda-allover", storeId: "s3", name: "FatChoi All Over Tee", ticker: "$PRINT", priceSol: 0.42, priceUsd: 52, type: "tshirt", image: "/products/sprintr/panda-allover-tee.jpg",
     variants: [{size:"M",color:"purple",stock:10},{size:"L",color:"purple",stock:12},{size:"XL",color:"purple",stock:6}],
     description: "Full-sublimation allover print. Panda crew, money flying." },
 ];
