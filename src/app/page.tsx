@@ -105,7 +105,7 @@ export default function HomePage() {
       <section className="px-4 sm:px-12 py-20 grid lg:grid-cols-[1fr_auto] gap-10 items-center">
         <div>
           <h3 className="text-ph-cream text-4xl sm:text-6xl tracking-tight mb-4">Printr. Ship. Earn.</h3>
-          <p className="text-ph-cream/70 text-[0.7rem] uppercase tracking-widest mb-6">we handle production. you keep the profit.</p>
+          <p className="text-ph-cream/70 text-[0.7rem] uppercase tracking-widest mb-6">join the printrhouse · create your store · and earn</p>
           <Link href="/launch" className="pixel-btn" style={{ background: "#ff59c7" }}>Open my store →</Link>
         </div>
         <img src="/mascot.png" alt="" className="h-64 lg:h-80 w-auto justify-self-center lg:justify-self-end drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]" />

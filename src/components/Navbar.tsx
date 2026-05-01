@@ -50,6 +50,10 @@ export default function Navbar() {
                 NFT Marketplace
                 <span className="desc">Coming soon</span>
               </span>
+              <span className="menu-item" data-disabled="true">
+                Meme Generator
+                <span className="desc">Coming soon</span>
+              </span>
             </div>
           )}
         </div>
