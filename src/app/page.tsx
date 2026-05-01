@@ -96,8 +96,8 @@ export default function HomePage() {
             const cover = covers[i % covers.length];
             return (
               <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
-                <div className="aspect-[3/1] rounded-lg mb-3 overflow-hidden bg-white/5">
-                  <img src={cover} alt={s.name} className="w-full h-full object-cover" />
+                <div className="aspect-square rounded-lg mb-3 overflow-hidden bg-white/5 flex items-center justify-center">
+                  <img src={cover} alt={s.name} className="w-full h-full object-contain" />
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
