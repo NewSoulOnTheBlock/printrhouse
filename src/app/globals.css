@@ -141,3 +141,8 @@ body {
 .menu-item .desc { display: block; font-size: 0.55rem; color: rgba(246,239,225,0.55); margin-top: 4px; text-transform: none; letter-spacing: 0.04em; }
 .menu-item[data-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
 .menu-item[data-disabled="true"]:hover { background: transparent; color: #f6efe1; }
+
+/* Thin horizontal scrollbar for mobile sliders */
+.scrollbar-thin::-webkit-scrollbar { height: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,89,199,0.5); border-radius: 9999px; }

@@ -66,7 +66,18 @@ export default function HomePage() {
           <h2 className="text-ph-cream text-3xl sm:text-5xl tracking-tight">New Collections</h2>
           <Link href="/stores" className="text-[0.65rem] uppercase tracking-widest text-ph-cream/70 hover:text-ph-pink">view all →</Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        {/* Mobile: horizontal snap-scroll, ~3 per row */}
+        <div className="sm:hidden -mx-4 px-4 overflow-x-auto snap-x snap-mandatory flex gap-3 pb-3 scrollbar-thin">
+          {products.map((p) => (
+            <div key={p.id} className="snap-start shrink-0 basis-[31%] min-w-[31%]">
+              <ProductCard p={p} compact />
+            </div>
+          ))}
+        </div>
+
+        {/* Tablet/Desktop: grid */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {products.slice(0, 6).map((p) => <ProductCard key={p.id} p={p} />)}
         </div>
       </section>
