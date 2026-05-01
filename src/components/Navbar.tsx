@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "@/lib/cart";
 import { useAuth } from "@/lib/auth";
+import { useCurrency } from "@/lib/currency";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function Navbar() {
@@ -10,6 +11,7 @@ export default function Navbar() {
   const setOpen = useCart((s) => s.setOpen);
   const user = useAuth((s) => s.user);
   const logout = useAuth((s) => s.logout);
+  const { currency, setCurrency } = useCurrency();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -61,8 +63,20 @@ export default function Navbar() {
         <img src="/logo-wordmark.png" alt="printrhouse" className="h-36 sm:h-48 w-auto max-w-[55vw] object-contain" />
       </Link>
 
-      {/* Right cluster: cart + bell */}
+      {/* Right cluster: currency toggle + cart + bell */}
       <div className="flex items-center gap-2 sm:gap-3 justify-self-end">
+        <div className="toggle-pill">
+          <button
+            onClick={() => setCurrency("SOL")}
+            data-active={currency === "SOL"}
+            className="px-3 py-1 rounded-full text-xs font-semibold text-white/60 data-[active=true]:bg-ph-purple-mid data-[active=true]:text-white"
+          >$SOL</button>
+          <button
+            onClick={() => setCurrency("USD")}
+            data-active={currency === "USD"}
+            className="px-3 py-1 rounded-full text-xs font-semibold text-white/60 data-[active=true]:bg-ph-pink data-[active=true]:text-white"
+          >$USD</button>
+        </div>
         <button
           onClick={() => setOpen(true)}
           aria-label="Open cart"
