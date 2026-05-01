@@ -22,13 +22,15 @@ export default function HomePage() {
           </div>
         </div>
         <div className="relative h-[420px] lg:h-[520px]">
-          <div className="absolute right-4 top-0 w-[70%] aspect-[3/4] pixel-card p-6 rotate-3">
+          <img src="/mascot.png" alt="Printrhouse mascot"
+               className="absolute right-0 bottom-0 h-[110%] w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] z-20" />
+          <div className="absolute right-[55%] top-4 w-[42%] aspect-[3/4] pixel-card p-4 rotate-3">
             <img src="/products/tee-cloud.svg" className="w-full h-full object-contain bg-white/95 rounded" />
-            <div className="absolute -top-3 left-6 bg-ph-mint text-ph-purple-dark text-[0.6rem] px-2 py-1 rounded">Drop</div>
+            <div className="absolute -top-3 left-4 bg-ph-mint text-ph-purple-dark text-[0.55rem] px-2 py-1 rounded">Drop</div>
           </div>
-          <div className="absolute left-0 bottom-0 w-[45%] aspect-square pixel-card p-3 -rotate-6">
+          <div className="absolute left-2 bottom-6 w-[34%] aspect-square pixel-card p-3 -rotate-6">
             <img src="/products/cap.svg" className="w-full h-full object-contain bg-white/95 rounded" />
-            <div className="absolute -top-3 right-3 bg-ph-pink text-white text-[0.6rem] px-2 py-1 rounded">Steph</div>
+            <div className="absolute -top-3 right-3 bg-ph-pink text-white text-[0.55rem] px-2 py-1 rounded">Steph</div>
           </div>
         </div>
       </section>
@@ -64,10 +66,13 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="px-4 sm:px-12 py-20 text-center">
-        <h3 className="text-ph-cream text-4xl sm:text-6xl tracking-tight mb-4">Print. Ship. Earn.</h3>
-        <p className="text-ph-cream/70 text-[0.7rem] uppercase tracking-widest mb-6">we handle production. you keep the profit.</p>
-        <Link href="/launch" className="pixel-btn" style={{ background: "#ff59c7" }}>Open my store →</Link>
+      <section className="px-4 sm:px-12 py-20 grid lg:grid-cols-[1fr_auto] gap-10 items-center">
+        <div>
+          <h3 className="text-ph-cream text-4xl sm:text-6xl tracking-tight mb-4">Print. Ship. Earn.</h3>
+          <p className="text-ph-cream/70 text-[0.7rem] uppercase tracking-widest mb-6">we handle production. you keep the profit.</p>
+          <Link href="/launch" className="pixel-btn" style={{ background: "#ff59c7" }}>Open my store →</Link>
+        </div>
+        <img src="/mascot.png" alt="" className="h-64 lg:h-80 w-auto justify-self-center lg:justify-self-end drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]" />
       </section>
     </div>
   );

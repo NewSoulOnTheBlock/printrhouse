@@ -15,12 +15,7 @@ export default function Navbar() {
   return (
     <header className="w-full px-4 sm:px-8 py-4 flex items-center justify-between gap-4 z-30 relative">
       <Link href="/" className="flex items-center gap-2">
-        <div className="w-8 h-8 grid grid-cols-3 grid-rows-3 gap-[2px]">
-          {[1,1,0,1,1,1,0,1,1].map((v,i)=>(
-            <div key={i} className={v?"bg-ph-cream":"bg-transparent"} />
-          ))}
-        </div>
-        <span className="text-ph-cream tracking-wider text-sm sm:text-base">printrhouse</span>
+        <img src="/logo-wordmark.png" alt="printrhouse" className="h-9 sm:h-11 w-auto" />
       </Link>
 
       <nav className="hidden md:flex gap-6 text-[0.65rem] uppercase tracking-widest text-ph-cream/80">
