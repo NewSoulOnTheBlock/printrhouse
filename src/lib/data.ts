@@ -47,6 +47,45 @@ export const products: Product[] = [
     variants: [{size:"M",color:"white",stock:10},{size:"L",color:"white",stock:12}], description: "Long sleeve, ringspun cotton, sleeve hits." },
   { id: "p6", slug: "believe-tee", storeId: "s2", name: "BELIEVE Tee", ticker: "$BLV", priceSol: 0.25, priceUsd: 30, type: "tshirt", image: "/products/tee-cloud.svg",
     variants: [{size:"S",color:"white",stock:9},{size:"M",color:"white",stock:16}], description: "Lightweight cotton tee with chest emblem." },
+
+  // FAT CHOI drops
+  { id: "p7", slug: "fatchoi-lion-plush-tee", storeId: "s1", name: "Lion Plush Tee", ticker: "$FAT", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/fatchoi/lion-plush-tee.jpg",
+    variants: [{size:"S",color:"yellow",stock:10},{size:"M",color:"yellow",stock:14},{size:"L",color:"yellow",stock:8},{size:"XL",color:"yellow",stock:5}],
+    description: "Mustard-yellow tee with the iconic thinking lion plush portrait." },
+  { id: "p8", slug: "fatchoi-meerkat-car-hoodie", storeId: "s1", name: "Meerkat Cruise Hoodie", ticker: "$FAT", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/fatchoi/meerkat-car-hoodie.jpg",
+    variants: [{size:"M",color:"yellow",stock:7},{size:"L",color:"yellow",stock:9},{size:"XL",color:"yellow",stock:4}],
+    description: "Heavyweight pullover hoodie. Meerkat at the wheel of a vintage cruiser." },
+  { id: "p9", slug: "fatchoi-meerkat-car-tee", storeId: "s1", name: "Meerkat Cruise Tee", ticker: "$FAT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/fatchoi/meerkat-car-tee.jpg",
+    variants: [{size:"S",color:"yellow",stock:11},{size:"M",color:"yellow",stock:15},{size:"L",color:"yellow",stock:9}],
+    description: "Oversized boxy fit. The cruise continues." },
+  { id: "p10", slug: "fatchoi-tiger-plush-black", storeId: "s1", name: "Tiger Plush Tee · Black", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-black-tee.jpg",
+    variants: [{size:"S",color:"black",stock:12},{size:"M",color:"black",stock:18},{size:"L",color:"black",stock:9}],
+    description: "Tiny tiger plush, big tee. Midweight 220gsm cotton." },
+  { id: "p11", slug: "fatchoi-tiger-plush-white", storeId: "s1", name: "Tiger Plush Tee · White", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-white-tee.jpg",
+    variants: [{size:"S",color:"white",stock:12},{size:"M",color:"white",stock:18},{size:"L",color:"white",stock:9}],
+    description: "Same plush, lighter cotton. Summer weight." },
+  { id: "p12", slug: "fatchoi-tiger-doodle", storeId: "s1", name: "Tiger Doodle Tee", ticker: "$FAT", priceSol: 0.25, priceUsd: 30, type: "tshirt", image: "/products/fatchoi/tiger-doodle-tee.jpg",
+    variants: [{size:"S",color:"white",stock:10},{size:"M",color:"white",stock:14},{size:"L",color:"white",stock:7}],
+    description: "Childlike tiger sketch. Lucky energy, hand-drawn." },
+
+  // BELIEVE drops
+  { id: "p13", slug: "believe-proof-tee", storeId: "s2", name: "Proof of Belief Tee", ticker: "$BLV", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/believe/proof-of-belief-tee.jpg",
+    variants: [{size:"S",color:"black",stock:10},{size:"M",color:"black",stock:18},{size:"L",color:"black",stock:9},{size:"XL",color:"black",stock:5}],
+    description: "Tweet-style chest print on a midweight black tee. Show me your proof." },
+  { id: "p14", slug: "believe-proof-hoodie", storeId: "s2", name: "Proof of Belief Hoodie", ticker: "$BLV", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/believe/proof-of-belief-hoodie.jpg",
+    variants: [{size:"M",color:"black",stock:8},{size:"L",color:"black",stock:11},{size:"XL",color:"black",stock:5}],
+    description: "Brushed-fleece pullover. The tweet, but warmer." },
+  { id: "p15", slug: "believe-praying-hands", storeId: "s2", name: "Praying Hands Tee", ticker: "$BLV", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/believe/praying-hands-tee.jpg",
+    variants: [{size:"S",color:"black",stock:9},{size:"M",color:"black",stock:14},{size:"L",color:"black",stock:8}],
+    description: "Gradient praying-hands square print. Faith on the chest." },
+
+  // SPRINTR drops
+  { id: "p16", slug: "sprintr-panda-sol", storeId: "s3", name: "Solana Panda Tee", ticker: "$PRINT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/sprintr/panda-sol-tee.jpg",
+    variants: [{size:"S",color:"black",stock:10},{size:"M",color:"black",stock:15},{size:"L",color:"black",stock:8}],
+    description: "Panda in a purple hoodie holding the Solana coin stack." },
+  { id: "p17", slug: "sprintr-panda-allover", storeId: "s3", name: "Panda Allover Tee", ticker: "$PRINT", priceSol: 0.42, priceUsd: 52, type: "tshirt", image: "/products/sprintr/panda-allover-tee.jpg",
+    variants: [{size:"M",color:"purple",stock:10},{size:"L",color:"purple",stock:12},{size:"XL",color:"purple",stock:6}],
+    description: "Full-sublimation allover print. Panda crew, money flying." },
 ];
 
 export function getProduct(slug: string) { return products.find((p) => p.slug === slug); }
