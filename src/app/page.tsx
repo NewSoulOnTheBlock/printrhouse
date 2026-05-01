@@ -5,6 +5,10 @@ import { products, stores } from "@/lib/data";
 
 const SLIDES = [
   { id: "mascot",  label: "Printrhouse",  img: "/mascot.png",                 href: "/stores" },
+  { id: "cover1",  label: "FAT CHOI",     img: "/stores/cover-1.jpg",         href: "/store/fatchoi" },
+  { id: "cover2",  label: "BELIEVE",      img: "/stores/cover-2.jpg",         href: "/store/believe" },
+  { id: "cover3",  label: "SPRINTR",      img: "/stores/cover-3.jpg",         href: "/store/sprintr" },
+  { id: "cover4",  label: "House Drop",   img: "/stores/cover-4.jpg",         href: "/stores" },
   { id: "tee",     label: "Cloud Tee",    img: "/products/tee-cloud.svg",     href: "/product/fat-choi-tshirt" },
   { id: "hoodie",  label: "Cloud Hoodie", img: "/products/hoodie-cloud.svg",  href: "/product/believe-hoodie" },
   { id: "sweat",   label: "House Sweat",  img: "/products/sweat-cloud.svg",   href: "/product/sprintr-sweatshirt" },
