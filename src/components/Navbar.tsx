@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <header className="w-full px-4 sm:px-8 py-4 flex items-center justify-between gap-4 z-30 relative">
       <Link href="/" className="flex items-center gap-2">
-        <img src="/logo-wordmark.png" alt="printrhouse" className="h-9 sm:h-11 w-auto" />
+        <img src="/logo-wordmark.png" alt="printrhouse" className="h-[18rem] sm:h-[22rem] w-auto" />
       </Link>
 
       <nav className="hidden md:flex gap-6 text-[0.65rem] uppercase tracking-widest text-ph-cream/80">
