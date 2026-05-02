@@ -31,13 +31,23 @@ export default function HomePage() {
 
           <div className="absolute inset-0">
             {SLIDES.map((s, i) => (
-              <img
-                key={s.id}
-                src={s.img}
-                alt={s.label}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500"
-                style={{ opacity: i === idx ? 1 : 0 }}
-              />
+              s.id === "mascot" ? (
+                <img
+                  key={s.id}
+                  src={s.img}
+                  alt={s.label}
+                  className="absolute right-4 sm:right-10 lg:right-16 top-1/2 -translate-y-1/2 max-h-[85%] w-auto object-contain transition-opacity duration-500"
+                  style={{ opacity: i === idx ? 1 : 0 }}
+                />
+              ) : (
+                <img
+                  key={s.id}
+                  src={s.img}
+                  alt={s.label}
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500"
+                  style={{ opacity: i === idx ? 1 : 0 }}
+                />
+              )
             ))}
           </div>
 
