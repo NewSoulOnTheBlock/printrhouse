@@ -6,7 +6,7 @@ import { products, stores } from "@/lib/data";
 const SLIDES = [
   { id: "mascot",  label: "Printrhouse",  img: "/mascot.png",                 href: "/stores" },
   { id: "cover1",  label: "FAT CHOI",     img: "/stores/cover-1.jpg",         href: "/store/fatchoi" },
-  { id: "cover2",  label: "BELIEVE",      img: "/stores/cover-2.jpg",         href: "/store/believe" },
+  { id: "cover2",  label: "BELIEVE",      img: "/stores/cover-2.png",         href: "/store/believe" },
   { id: "cover3",  label: "SPRINTR",      img: "/stores/cover-3.jpg",         href: "/store/sprintr" },
   { id: "cover4",  label: "House Drop",   img: "/stores/cover-4.jpg",         href: "/stores" },
 ];
@@ -107,7 +107,7 @@ export default function HomePage() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {stores.map((s, i) => {
-            const covers = ["/stores/cover-1.jpg", "/stores/cover-2.jpg", "/stores/cover-3.jpg", "/stores/cover-4.jpg"];
+            const covers = ["/stores/cover-1.jpg", "/stores/cover-2.png", "/stores/cover-3.jpg", "/stores/cover-4.jpg"];
             const cover = covers[i % covers.length];
             return (
               <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
