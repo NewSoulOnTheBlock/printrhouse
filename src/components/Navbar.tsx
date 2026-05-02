@@ -38,6 +38,10 @@ export default function Navbar() {
         </button>
         {menuOpen && (
           <div className="menu-dropdown">
+            <Link href="/shop" className="menu-item" onClick={() => setMenuOpen(false)}>
+              Shop
+              <span className="desc">All items currently on sale</span>
+            </Link>
             <Link href="/stores" className="menu-item" onClick={() => setMenuOpen(false)}>
               Merch Marketplace
               <span className="desc">All merchandise listed for sale</span>
@@ -45,6 +49,14 @@ export default function Navbar() {
             <Link href="/launch" className="menu-item" onClick={() => setMenuOpen(false)}>
               Create Your Store
               <span className="desc">Upload memes, add descriptions, pick merch styles</span>
+            </Link>
+            <a href="https://t.me/printrhouse" target="_blank" rel="noopener noreferrer" className="menu-item" onClick={() => setMenuOpen(false)}>
+              Message Admin
+              <span className="desc">Chat with us on Telegram</span>
+            </a>
+            <Link href="/privacy" className="menu-item" onClick={() => setMenuOpen(false)}>
+              Privacy Policy
+              <span className="desc">How we protect your Web3 identity</span>
             </Link>
             <span className="menu-item" data-disabled="true">
               NFT Marketplace

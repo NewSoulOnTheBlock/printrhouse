@@ -113,12 +113,12 @@ export default function HomePage() {
                 <div className="aspect-square rounded-lg mb-3 overflow-hidden bg-white/5 flex items-center justify-center">
                   <img src={cover} alt={s.name} className="w-full h-full object-contain" />
                 </div>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="text-white text-sm font-semibold">{s.name}</div>
-                    <div className="text-white/50 text-xs">by {s.owner}</div>
+                <div className="flex justify-between items-start gap-2">
+                  <div className="min-w-0">
+                    <div className="text-white text-sm font-semibold truncate">{s.name}</div>
+                    <div className="text-white/50 text-xs truncate">{s.bio}</div>
                   </div>
-                  <div className="text-ph-cyan text-xs">{s.ticker}</div>
+                  <div className="text-ph-cyan text-xs shrink-0">{s.ticker}</div>
                 </div>
               </Link>
             );
