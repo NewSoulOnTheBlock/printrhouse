@@ -6,6 +6,7 @@ import { products, stores } from "@/lib/data";
 const SLIDES = [
   { id: "mascot",  label: "Printrhouse",  img: "/mascot.png",                 href: "/stores" },
   { id: "cover1",  label: "FAT CHOI",     img: "/stores/cover-1.png",         href: "/store/fatchoi" },
+  { id: "cheeto",  label: "Cheeto Tiger", img: "/stores/cover-cheeto.png",    href: "/store/fatchoi" },
   { id: "cover2",  label: "BELIEVE",      img: "/stores/cover-2.png",         href: "/store/believe" },
   { id: "cover3",  label: "SPRINTR",      img: "/stores/cover-3.jpg",         href: "/store/sprintr" },
   { id: "cover4",  label: "House Drop",   img: "/stores/cover-4.jpg",         href: "/stores" },
