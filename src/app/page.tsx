@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { products, stores } from "@/lib/data";
+import { useCart } from "@/lib/cart";
 
 const SLIDES = [
   { id: "mascot",   label: "Printrhouse",   img: "/mascot.png",                    href: "/stores" },
@@ -140,6 +141,26 @@ export default function HomePage() {
 }
 
 function ProductTile({ p, discount }: { p: any; discount?: boolean }) {
+  const add = useCart((s) => s.add);
+  const onAdd = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const v = p.variants?.[0];
+    add({
+      productId: p.id,
+      slug: p.slug,
+      name: p.name,
+      ticker: p.ticker,
+      size: v?.size ?? "M",
+      color: v?.color ?? "Default",
+      qty: 1,
+      priceSol: p.priceSol,
+      priceUsd: p.priceUsd,
+      image: p.image,
+      printifyProductId: p.printifyProductId,
+      printifyVariantId: v?.printifyVariantId,
+    });
+  };
   return (
     <Link
       href={`/product/${p.slug}`}
@@ -150,7 +171,19 @@ function ProductTile({ p, discount }: { p: any; discount?: boolean }) {
         {discount && <span className="discount-pill">5% OFF</span>}
       </div>
       <div className="mt-2 text-white text-sm sm:text-base font-semibold truncate">{p.name}</div>
-      <div className="text-white/50 text-xs">${p.priceUsd}</div>
+      <div className="mt-1 flex items-center justify-between gap-2">
+        <div className="text-white/50 text-xs">${p.priceUsd}</div>
+        <button
+          onClick={onAdd}
+          aria-label="Add to cart"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-ph-purple-mid hover:bg-ph-pink text-white transition-colors shrink-0"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="9" cy="20" r="1.4" /><circle cx="18" cy="20" r="1.4" />
+            <path d="M2.5 3h2.6l2.4 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.5l1.6-6.5H6" />
+          </svg>
+        </button>
+      </div>
     </Link>
   );
 }
