@@ -55,7 +55,7 @@ export const products: Product[] = [
   { id: "p8", slug: "fatchoi-meerkat-car-hoodie", storeId: "s1", name: "Flat Eric Hoodie", ticker: "$FAT", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/fatchoi/meerkat-car-hoodie.jpg",
     variants: [{size:"M",color:"yellow",stock:7},{size:"L",color:"yellow",stock:9},{size:"XL",color:"yellow",stock:4}],
     description: "Heavyweight pullover hoodie. Meerkat at the wheel of a vintage cruiser." },
-  { id: "p9", slug: "fatchoi-meerkat-car-tee", storeId: "s1", name: "Meerkat Cruise Tee", ticker: "$FAT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/fatchoi/meerkat-car-tee.jpg",
+  { id: "p9", slug: "fatchoi-meerkat-car-tee", storeId: "s1", name: "Flat Eric 3", ticker: "$FAT", priceSol: 0.3, priceUsd: 36, type: "tshirt", image: "/products/fatchoi/meerkat-car-tee.jpg",
     variants: [{size:"S",color:"yellow",stock:11},{size:"M",color:"yellow",stock:15},{size:"L",color:"yellow",stock:9}],
     description: "Oversized boxy fit. The cruise continues." },
   { id: "p10", slug: "fatchoi-tiger-plush-black", storeId: "s1", name: "Cheeto Tiger Tee 1", ticker: "$FAT", priceSol: 0.27, priceUsd: 32, type: "tshirt", image: "/products/fatchoi/tiger-plush-black-tee.jpg",
