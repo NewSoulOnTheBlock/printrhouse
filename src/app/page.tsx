@@ -7,9 +7,9 @@ import { useCart } from "@/lib/cart";
 const SLIDES = [
   { id: "mascot",   label: "Printrhouse",   img: "/mascot.png",                    href: "/stores" },
   { id: "fatchoi",  label: "FatChoi",       img: "/stores/cover-fatchoi.png",      href: "/store/fatchoi" },
-  { id: "flateric", label: "Flat Eric",     img: "/stores/cover-flateric.png",     href: "/store/fatchoi" },
-  { id: "cheeto",   label: "Cheeto Tiger",  img: "/stores/cover-cheeto.png",       href: "/store/fatchoi" },
-  { id: "cover2",   label: "BELIEVE",       img: "/stores/cover-2.png",            href: "/store/believe" },
+  { id: "flateric", label: "Flat Eric",     img: "/stores/cover-flateric.png",     href: "/store/flateric" },
+  { id: "cheeto",   label: "Cheeto Tiger",  img: "/stores/cover-cheeto.png",       href: "/store/cheeto-tiger" },
+  { id: "cover2",   label: "Believe",       img: "/stores/cover-2.png",            href: "/store/believe" },
 ];
 
 export default function HomePage() {
@@ -107,15 +107,10 @@ export default function HomePage() {
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { name: "FAT CHOI",     bio: "Lucky merch for lucky degens.",          ticker: "$FAT", cover: "/stores/cover-fatchoi.png",  href: "/store/fatchoi" },
-            { name: "BELIEVE",      bio: "Faith-based fits for the on-chain faithful.", ticker: "$BLV", cover: "/stores/cover-2.png",        href: "/store/believe" },
-            { name: "Flat Eric",    bio: "Yellow-fur funk. Medal-winning vibes.",  ticker: "$FAT", cover: "/stores/cover-flateric.png", href: "/store/fatchoi" },
-            { name: "Cheeto Tiger", bio: "Stripey little snack. Big energy.",      ticker: "$FAT", cover: "/stores/cover-cheeto.png",   href: "/store/fatchoi" },
-          ].map((s) => (
-            <Link key={s.name} href={s.href} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
+          {stores.map((s) => (
+            <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
               <div className="aspect-square rounded-lg mb-3 overflow-hidden bg-white/5 flex items-center justify-center">
-                <img src={s.cover} alt={s.name} className="w-full h-full object-cover" />
+                <img src={s.banner} alt={s.name} className="w-full h-full object-cover" />
               </div>
               <div className="flex justify-between items-start gap-2">
                 <div className="min-w-0">
