@@ -75,7 +75,7 @@ export const products: Product[] = [
   { id: "p14", slug: "believe-proof-hoodie", storeId: "s2", name: "Proof of Belief Hoodie", ticker: "$BLV", priceSol: 0.55, priceUsd: 68, type: "hoodie", image: "/products/believe/proof-of-belief-hoodie.jpg",
     variants: [{size:"M",color:"black",stock:8},{size:"L",color:"black",stock:11},{size:"XL",color:"black",stock:5}],
     description: "Brushed-fleece pullover. The tweet, but warmer." },
-  { id: "p15", slug: "believe-praying-hands", storeId: "s2", name: "Praying Hands Tee", ticker: "$BLV", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/believe/praying-hands-tee.jpg",
+  { id: "p15", slug: "believe-praying-hands", storeId: "s2", name: "Proof of Belief Tee", ticker: "$BLV", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/believe/praying-hands-tee.jpg",
     variants: [{size:"S",color:"black",stock:9},{size:"M",color:"black",stock:14},{size:"L",color:"black",stock:8}],
     description: "Gradient praying-hands square print. Faith on the chest." },
 
