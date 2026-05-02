@@ -107,24 +107,25 @@ export default function HomePage() {
           <Link href="/stores" className="text-white/60 text-sm hover:text-white">See All</Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stores.map((s, i) => {
-            const covers = ["/stores/cover-1.png", "/stores/cover-2.png", "/stores/cover-3.jpg", "/stores/cover-4.jpg"];
-            const cover = covers[i % covers.length];
-            return (
-              <Link key={s.id} href={`/store/${s.slug}`} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
-                <div className="aspect-square rounded-lg mb-3 overflow-hidden bg-white/5 flex items-center justify-center">
-                  <img src={cover} alt={s.name} className="w-full h-full object-contain" />
+          {[
+            { name: "FAT CHOI",     bio: "Lucky merch for lucky degens.",          ticker: "$FAT", cover: "/stores/cover-fatchoi.png",  href: "/store/fatchoi" },
+            { name: "BELIEVE",      bio: "Faith-based fits for the on-chain faithful.", ticker: "$BLV", cover: "/stores/cover-2.png",        href: "/store/believe" },
+            { name: "Flat Eric",    bio: "Yellow-fur funk. Medal-winning vibes.",  ticker: "$FAT", cover: "/stores/cover-flateric.png", href: "/store/fatchoi" },
+            { name: "Cheeto Tiger", bio: "Stripey little snack. Big energy.",      ticker: "$FAT", cover: "/stores/cover-cheeto.png",   href: "/store/fatchoi" },
+          ].map((s) => (
+            <Link key={s.name} href={s.href} className="pixel-card p-4 hover:bg-ph-navy-3 transition-colors block">
+              <div className="aspect-square rounded-lg mb-3 overflow-hidden bg-white/5 flex items-center justify-center">
+                <img src={s.cover} alt={s.name} className="w-full h-full object-cover" />
+              </div>
+              <div className="flex justify-between items-start gap-2">
+                <div className="min-w-0">
+                  <div className="text-white text-sm font-semibold truncate">{s.name}</div>
+                  <div className="text-white/50 text-xs truncate">{s.bio}</div>
                 </div>
-                <div className="flex justify-between items-start gap-2">
-                  <div className="min-w-0">
-                    <div className="text-white text-sm font-semibold truncate">{s.name}</div>
-                    <div className="text-white/50 text-xs truncate">{s.bio}</div>
-                  </div>
-                  <div className="text-ph-cyan text-xs shrink-0">{s.ticker}</div>
-                </div>
-              </Link>
-            );
-          })}
+                <div className="text-ph-cyan text-xs shrink-0">{s.ticker}</div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
