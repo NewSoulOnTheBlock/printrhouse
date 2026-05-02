@@ -6,6 +6,7 @@ import { useCart } from "@/lib/cart";
 
 const SLIDES = [
   { id: "mascot",   label: "Printrhouse",   img: "/mascot.png",                    href: "/stores" },
+  { id: "fatchoi",  label: "FatChoi",       img: "/stores/cover-fatchoi.png",      href: "/store/fatchoi" },
   { id: "flateric", label: "Flat Eric",     img: "/stores/cover-flateric.png",     href: "/store/fatchoi" },
   { id: "cheeto",   label: "Cheeto Tiger",  img: "/stores/cover-cheeto.png",       href: "/store/fatchoi" },
   { id: "cover2",   label: "BELIEVE",       img: "/stores/cover-2.png",            href: "/store/believe" },
