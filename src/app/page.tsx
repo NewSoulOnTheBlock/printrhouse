@@ -35,7 +35,7 @@ export default function HomePage() {
                 key={s.id}
                 src={s.img}
                 alt={s.label}
-                className="absolute inset-0 w-full h-full object-contain transition-opacity duration-500"
+                className="absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-500"
                 style={{ opacity: i === idx ? 1 : 0 }}
               />
             ))}
