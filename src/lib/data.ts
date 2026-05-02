@@ -32,22 +32,6 @@ export const stores: Store[] = [
 ];
 
 export const products: Product[] = [
-  { id: "p1", slug: "fat-choi-tshirt", storeId: "s1", name: "FAT CHOI T-shirt", ticker: "$FAT", priceSol: 0.3, priceUsd: 32, type: "tshirt", image: "/products/tee-cloud.svg",
-    variants: [{ size:"S",color:"white",stock:12},{size:"M",color:"white",stock:18},{size:"L",color:"white",stock:9},{size:"XL",color:"white",stock:4},{size:"M",color:"black",stock:7}],
-    description: "Heavyweight 240gsm cotton tee with a serene cloud print on the chest. Fulfilled by Printful." },
-  { id: "p2", slug: "believe-hoodie", storeId: "s2", name: "BELIEVE Hoodie", ticker: "$BLV", priceSol: 0.3, priceUsd: 64, type: "hoodie", image: "/products/hoodie-cloud.svg",
-    variants: [{size:"M",color:"white",stock:6},{size:"L",color:"white",stock:11},{size:"XL",color:"white",stock:5}],
-    description: "Brushed-fleece pullover hoodie. Heavy. Soft. Holy." },
-  { id: "p3", slug: "sprintr-sweatshirt", storeId: "s1", name: "SPRINTR Sweat Shirt", ticker: "$PRINT", priceSol: 0.3, priceUsd: 58, type: "sweatshirt", image: "/products/sweat-cloud.svg",
-    variants: [{size:"S",color:"white",stock:8},{size:"M",color:"white",stock:14},{size:"L",color:"white",stock:10}],
-    description: "Crewneck sweatshirt with back-print. House drop." },
-  { id: "p4", slug: "sprintr-cap", storeId: "s1", name: "SPRINTR Cap", ticker: "$PRINT", priceSol: 0.15, priceUsd: 28, type: "cap", image: "/products/cap.svg",
-    variants: [{size:"OS",color:"purple",stock:25}], description: "Six-panel pixel-logo cap. One size." },
-  { id: "p5", slug: "fat-choi-longsleeve", storeId: "s1", name: "FAT CHOI Longsleeve", ticker: "$FAT", priceSol: 0.35, priceUsd: 42, type: "longsleeve", image: "/products/long-cloud.svg",
-    variants: [{size:"M",color:"white",stock:10},{size:"L",color:"white",stock:12}], description: "Long sleeve, ringspun cotton, sleeve hits." },
-  { id: "p6", slug: "believe-tee", storeId: "s2", name: "BELIEVE Tee", ticker: "$BLV", priceSol: 0.25, priceUsd: 30, type: "tshirt", image: "/products/tee-cloud.svg",
-    variants: [{size:"S",color:"white",stock:9},{size:"M",color:"white",stock:16}], description: "Lightweight cotton tee with chest emblem." },
-
   // FLAT ERIC drops
   { id: "p7", slug: "flateric-lion-plush-tee", storeId: "s3", name: "Flat Eric Tee", ticker: "$ERIC", priceSol: 0.28, priceUsd: 34, type: "tshirt", image: "/products/fatchoi/lion-plush-tee.jpg",
     variants: [{size:"S",color:"yellow",stock:10},{size:"M",color:"yellow",stock:14},{size:"L",color:"yellow",stock:8},{size:"XL",color:"yellow",stock:5}],
